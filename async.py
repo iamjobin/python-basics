@@ -59,4 +59,8 @@ AI agents benefit because they make many network calls
 
 Golden rule: never block the event loop
 
+Python programs start synchronously.
+    await requires an active event loop, so it is only allowed inside async functions.
+    asyncio.run() explicitly creates the event loop and bridges sync to async.
+
 '''
